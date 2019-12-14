@@ -1,0 +1,41 @@
+.searchBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 90%;
+    height: 100%;
+    margin: 1rem auto;
+    background-color: inherit;
+    overflow: auto;
+  }
+  
+  .inputField{
+    margin: 0 10px 0 5px;
+    border: none;
+    background-color: #F7F4F4;
+    padding: 5px;
+  }
+  
+  .inputField:focus,
+  .inputField:hover {
+    background-color: #b3aeaec4;
+    transition: all .3s;
+  }
+  
+  @media screen and (max-width: 2900px){
+    .searchFields{
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .inputField{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 5px;
+    }
+    .labelField{
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+  }
