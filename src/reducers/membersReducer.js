@@ -1,4 +1,4 @@
-function membersReducer(state = { data: {  }, inputSearch: "" }, action) {
+function membersReducer(state = { data: {  }, inputSearch: "", searchType: "name"}, action) {
     switch (action.type) {
       case "FETCH_MEMBERS":
         return {
@@ -10,6 +10,11 @@ function membersReducer(state = { data: {  }, inputSearch: "" }, action) {
             ...state,
             inputSearch: action.value
           };
+          case "ADVANCE_FILTER_MEMBERS":
+            return {
+              ...state,
+              searchType: action.value
+            };
       default:
         return state;
     }
