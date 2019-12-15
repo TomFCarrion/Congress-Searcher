@@ -9,7 +9,7 @@ export const InfoCardList = () => {
     const content = useSelector(state => state.membersReducer);
     const dispatch = useDispatch();
 
-    let config = {
+    const config = {
         headers:{
             'X-API-KEY': ''
         }
@@ -32,7 +32,7 @@ export const InfoCardList = () => {
             dispatch(fetchData());
         }, [])
 
-      const filter = () => {  
+      const filterMembers = () => {  
        let filter = []
        let advanceSearch = "";
 
@@ -67,7 +67,7 @@ export const InfoCardList = () => {
 
     return (
         <ul>
-            {filter().map(member => <InfoCard  party={member.party} fullName={`${member.first_name} ${member.last_name}`} title={member.title} key={member.id}/> )}
+            {filterMembers().map(member => <InfoCard  id={member.id} party={member.party} fullName={`${member.first_name} ${member.last_name}`} title={member.title} key={member.id}/> )}
         </ul>     
     )
 }
