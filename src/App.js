@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { InfoCardList } from './components/infoCardList/index'
 import { InfoCardDetail } from './components/infoCardDetail/Index'
 import { Footer } from './components/footer/index'
-import SearchBar from './searchBar/index'
+import SearchBar from './components/searchBar/index'
 
 
 import './App.scss';
