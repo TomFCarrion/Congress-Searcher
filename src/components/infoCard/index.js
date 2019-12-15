@@ -27,6 +27,7 @@ export const InfoCard = ({ id, party='', fullName = 'Full Name', title = 'senato
   return (
     <Link to={{
       pathname: '/detail',
+      state: {id: id}
     }}>
     <article>
       <div className="container">
