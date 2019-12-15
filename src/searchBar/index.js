@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import React  from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 
@@ -6,18 +6,22 @@ import './styles.scss';
 
 const SearchBar = () => {
 
-    const searchInput = useSelector(state => state.membersReducer);
+    const reducer = useSelector(state => state.membersReducer);
     const dispatch = useDispatch();
 
     const handleChange = val => {
-      console.log(val)
       dispatch({
         type: "FILTER_MEMBERS",
         value: val
       })
     }
 
-    console.log(searchInput.inputSearch);
+    const handleAdvanceChange = val => {
+      dispatch({
+        type: "ADVANCE_FILTER_MEMBERS",
+        value: val
+      })
+    }
 
   return (
       <div className="searchBar">
@@ -26,9 +30,16 @@ const SearchBar = () => {
           name="search"
           type="text"
           placeholder="Search..."
-          value={searchInput.inputSearch}
+          value={reducer.inputSearch}
           onChange={(e) => handleChange(e.target.value)}
         />
+        <select onChange={(e)=>handleAdvanceChange(e.target.value)}>
+          <option value="name">Name</option>
+          <option value="title">Title</option>
+          <option value="party">Party</option>
+          <option value="gender">Gender</option>
+        </select>
+
       </div>
 
   )
