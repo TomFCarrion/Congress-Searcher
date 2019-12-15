@@ -1,7 +1,9 @@
   
 import React from 'react'
 import './styles.scss'
-   
+
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
 
 const REPUBLICAN_IMAGE = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Republican_Disc.svg/1200px-Republican_Disc.svg.png'
 const DEMOCRAT_IMAGE = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/US_Democratic_Party_Logo.svg/2000px-US_Democratic_Party_Logo.svg.png'
@@ -23,6 +25,9 @@ export const InfoCard = ({ id, party='', fullName = 'Full Name', title = 'senato
   }
 
   return (
+    <Link to={{
+      pathname: '/detail',
+    }}>
     <article>
       <div className="container">
            <img className="image" src={PartyImage()} alt="member"/>
@@ -31,7 +36,8 @@ export const InfoCard = ({ id, party='', fullName = 'Full Name', title = 'senato
                 <span className="secondary">{ title }</span>
            </div>
       </div>
-
     </article>
+    </Link>
+
   )
 }
