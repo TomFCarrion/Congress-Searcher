@@ -1,5 +1,7 @@
 import React  from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import{ FILTER_MEMBERS,ADVANCE_FILTER_MEMBERS } from '../../actions/actionTypes'
+
 
 
 import './styles.scss';
@@ -11,14 +13,14 @@ const SearchBar = () => {
 
     const handleChange = val => {
       dispatch({
-        type: "FILTER_MEMBERS",
+        type: FILTER_MEMBERS,
         value: val
       })
     }
 
     const handleAdvanceChange = val => {
       dispatch({
-        type: "ADVANCE_FILTER_MEMBERS",
+        type: ADVANCE_FILTER_MEMBERS,
         value: val
       })
     }

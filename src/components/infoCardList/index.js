@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { InfoCard } from '../infoCard/index';
 
 import { useDispatch, useSelector } from 'react-redux';
+import{ FETCH_MEMBERS } from '../../actions/actionTypes'
+
 import axios from 'axios';
 
 export const InfoCardList = () => {
@@ -21,7 +23,7 @@ export const InfoCardList = () => {
         )
           .then(res =>
             dispatch({
-              type: "FETCH_MEMBERS",
+              type: FETCH_MEMBERS,
               data: res.data.results[0].members
             })
           );
