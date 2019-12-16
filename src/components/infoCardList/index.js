@@ -4,6 +4,8 @@ import { InfoCard } from '../infoCard/index';
 import { useDispatch, useSelector } from 'react-redux';
 import{ FETCH_MEMBERS } from '../../actions/actionTypes'
 
+import { mockedData } from '../../mockedData';
+
 import axios from 'axios';
 
 export const InfoCardList = () => {
@@ -17,21 +19,18 @@ export const InfoCardList = () => {
         }
     }
 
+
+    //IN THIS BRANCH FETCH DATA ARE MOCKED BEACUSE THE LACK OF API KEY. 
+
     function fetchData() {
-        return dispatch => {
-          axios.get('https://api.propublica.org/congress/v1/116/senate/members.json',  config
-        )
-          .then(res =>
             dispatch({
               type: FETCH_MEMBERS,
-              data: res.data.results[0].members
+              data: mockedData.results[0].members
             })
-          );
-        };
       }
 
         useEffect(() => {
-            dispatch(fetchData());
+            fetchData()
         }, [])
 
       const filterMembers = () => {  
