@@ -2,9 +2,7 @@ $font-stack:    Helvetica, sans-serif;
 $primary-color: #191919;
 $secondary-color: #2176FF;
 
-.Detail{
-.container {
-    padding: 20px;
+.containerDetail {
     border-radius: 3px;
     position: relative;
     overflow: hidden;
@@ -12,45 +10,57 @@ $secondary-color: #2176FF;
     height: 100%;
     margin: auto;
     margin-bottom: 1rem;
-  }
-
-  .image {
-    max-height:50%; 
-    max-width:30%;
-    float: left;
-  }
-
-  .info{
-    overflow: auto;
-    display: inline-block;
-    width: 60%;
-    margin: 10px;
-    font-size: 17px;
+    align-items: center;
+    table-layout:fixed;
 
   }
-  .primary{
+
+  .name {
     color: $primary-color;
-    font-size:1.2rem;
+    font-size:auto;
+    padding: 1.2rem;
     margin: auto;
+    white-space: wrap;
     }
 
+  .state {
+    color: grey;
+    font-size:0.6rem;
+    padding: 7px;
+    margin: auto;
+    white-space: wrap;
+    }
+      
+  .date {
+    color: grey;
+    font-size:0.5rem;
+    }
 
-
-  .secondary {
+  .title {
     line-height: 26px;
-    /*font-family: Helvetica, sans-serif;*/
+    color: $secondary-color;
+    font-weight: normal;
+    font-size: 1rem;
+  }
+
+  .twitter {
+    line-height: 26px;
+    color: $secondary-color;
     font-weight: normal;
     font-size: 17px;
-    
   }
-}
 
 .backButtom {
   margin-left: 8px;
   padding: 5px;
-  width: 10%;
+  width: 5rem;
   border: none;
   color: #F7F4F4;
   background-color: $secondary-color;
 }
 
+.imageDetail {
+  align-content: center;
+  max-height:4rem; 
+  max-width:4rem;
+} 
