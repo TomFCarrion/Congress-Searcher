@@ -1,7 +1,7 @@
 # Congress Searcher!
 [![Javascript](http://img.shields.io/badge/Javascript-yellow.svg)]() [![Reacrt.js](http://img.shields.io/badge/React.js-blue.svg)]() [![hooks](http://img.shields.io/badge/hooks-purple.svg)]()
 
-This project was a technical test part of my selection process at my current company.
+This project was a technical test part of a successful selection process at my current company.
 I developed it in 2 days and the code is as it was delivered.
 
 
